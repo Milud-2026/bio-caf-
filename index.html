@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIO CAFE | Distributeurs automatiques de café, boissons & snacks au Maroc</title>
+<meta name="description" content="BIO CAFE installe, gère et entretient des distributeurs automatiques de café, boissons et snacks pour les entreprises marocaines. Produits italiens, plus de 16 ans d'expérience, service premium clé en main.">
+<meta name="keywords" content="distributeur automatique café Maroc, machine à café entreprise, distributeur snacks, BIO CAFE, Soufiane Mourad">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.biocafe.ma/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BIO CAFE">
+<meta property="og:title" content="BIO CAFE | Distributeurs automatiques de café & snacks pour entreprises">
+<meta property="og:description" content="Du café de qualité à la qualité de service. Installation gratuite, produits italiens, assistance rapide, plus de 16 ans d'expérience au service des entreprises marocaines.">
+<meta property="og:image" content="assets/images/og-cover.jpg">
+<meta property="og:locale" content="fr_MA">
+<meta property="og:url" content="https://www.biocafe.ma/">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BIO CAFE | Distributeurs automatiques de café & snacks">
+<meta name="twitter:description" content="Installation, gestion et maintenance de distributeurs automatiques pour entreprises. Produits italiens, techniciens qualifiés, plus de 16 ans d'expérience.">
+<meta name="twitter:image" content="assets/images/og-cover.jpg">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- Polices -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Feuilles de style : utilitaires (équivalent Tailwind, auto-hébergé) + styles personnalisés.
+     Aucun script externe requis : le site fonctionne hors-ligne et sans dépendance à un CDN. -->
+<link rel="stylesheet" href="assets/css/utilities.css">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BIO CAFE",
+  "image": "https://www.biocafe.ma/assets/images/og-cover.jpg",
+  "description": "Vente, installation, gestion et maintenance de distributeurs automatiques de café, boissons et snacks pour entreprises au Maroc.",
+  "areaServed": "MA",
+  "telephone": ["+212664757055", "+212626005450"],
+  "founder": { "@type": "Person", "name": "Soufiane Mourad" },
+  "slogan": "Du café de qualité à la qualité de service",
+  "url": "https://www.biocafe.ma/"
+}
+</script>
+</head>
+<body class="bg-white text-black font-body antialiased">
+
+<!-- Barre de progression "vapeur" -->
+<div class="steam-progress" aria-hidden="true">
+  <div class="steam-progress__fill" id="steam-progress-fill"></div>
+</div>
+
+<!-- ============================= HEADER ============================= -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+  <div class="container-x flex items-center justify-between px-6 md:px-10 py-5">
+    <a href="#top" class="flex items-center gap-2.5 group">
+      <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1A1512"/>
+        <path d="M20 28h20v10a10 10 0 0 1-10 10 10 10 0 0 1-10-10V28z" fill="none" stroke="#B08D57" stroke-width="2.5"/>
+        <path d="M40 30h4a5 5 0 0 1 0 10h-4" fill="none" stroke="#B08D57" stroke-width="2.5"/>
+        <path d="M25 22c0-3 3-3 3-6s-3-3-3-6" fill="none" stroke="#B08D57" stroke-width="2" stroke-linecap="round"/>
+        <path d="M32 22c0-3 3-3 3-6s-3-3-3-6" fill="none" stroke="#B08D57" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="font-display text-xl md:text-2xl font-semibold tracking-tight text-white header-logo-text">BIO CAFE</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-9 text-sm font-semibold text-white/90 header-nav-text" aria-label="Navigation principale">
+      <a href="#a-propos" class="hover:text-gold transition-colors">Qui sommes-nous</a>
+      <a href="#produits" class="hover:text-gold transition-colors">Produits</a>
+      <a href="#menu" class="hover:text-gold transition-colors">Menu café</a>
+      <a href="#methode" class="hover:text-gold transition-colors">Comment ça marche</a>
+      <a href="#clients" class="hover:text-gold transition-colors">Clients</a>
+      <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+    </nav>
+
+    <a href="#contact" data-cta data-cta-message="Bonjour BIO CAFE, je souhaite demander une installation." class="hidden md:inline-flex btn btn-primary !py-2.5 !px-6 !text-sm">Demander une installation</a>
+
+    <button id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu" class="md:hidden text-white p-2">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden flex-col gap-1 bg-black/95 backdrop-blur px-6 pb-6 pt-2 text-white">
+    <a href="#a-propos" class="py-3 border-b border-white/10">Qui sommes-nous</a>
+    <a href="#produits" class="py-3 border-b border-white/10">Produits</a>
+    <a href="#menu" class="py-3 border-b border-white/10">Menu café</a>
+    <a href="#methode" class="py-3 border-b border-white/10">Comment ça marche</a>
+    <a href="#clients" class="py-3 border-b border-white/10">Clients</a>
+    <a href="#contact" class="py-3">Contact</a>
+  </div>
+</header>
+
+<!-- ============================= HERO ============================= -->
+<section id="top" class="hero">
+  <div class="hero__texture"></div>
+  <div class="hero__grain"></div>
+
+  <!-- Illustration décorative de tasse fumante (remplace la photographie) -->
+  <svg class="hero__cup hidden md:block" viewBox="0 0 400 400" aria-hidden="true">
+    <g class="hero__steam-svg">
+      <path class="steam-strand" d="M150 140c0-18 18-18 18-36s-18-18-18-36"/>
+      <path class="steam-strand d2" d="M200 140c0-18 18-18 18-36s-18-18-18-36"/>
+      <path class="steam-strand d3" d="M250 140c0-18 18-18 18-36s-18-18-18-36"/>
+    </g>
+    <path d="M120 170h160v90a80 80 0 0 1-80 80 80 80 0 0 1-80-80v-90z" fill="none" stroke="#D8BD8F" stroke-width="3" opacity="0.7"/>
+    <path d="M280 185h30a38 38 0 0 1 0 76h-30" fill="none" stroke="#D8BD8F" stroke-width="3" opacity="0.7"/>
+    <ellipse cx="200" cy="170" rx="80" ry="14" fill="#B08D57" opacity="0.25"/>
+  </svg>
+
+  <div class="container-x relative z-10 px-6 md:px-10 pb-20 md:pb-28 pt-40">
+    <p class="eyebrow mb-5 reveal">Depuis plus de 16 ans au service des entreprises marocaines</p>
+    <h1 class="font-display text-white text-[2.6rem] leading-[1.05] sm:text-6xl md:text-7xl font-semibold max-w-3xl text-balance reveal">
+      Du café de qualité,<br><span class="italic text-gold-light" style="color:#D8BD8F;">à la qualité de service.</span>
+    </h1>
+    <p class="mt-7 text-white/75 text-lg max-w-xl reveal">
+      BIO CAFE conçoit, installe et gère des distributeurs automatiques de café, boissons et snacks pour les entreprises, avec des produits italiens sélectionnés et des techniciens qui connaissent chaque machine par cœur.
+    </p>
+    <div class="mt-10 flex flex-wrap gap-4 reveal">
+      <a href="#contact" data-cta data-cta-message="Bonjour BIO CAFE, je souhaite demander une installation." class="btn btn-primary">Demander une installation</a>
+      <a href="#produits" class="btn btn-ghost">Découvrir nos produits</a>
+    </div>
+  </div>
+</section>
+
+<!-- Séparateur "vapeur" -->
+<svg class="steam-divider bg-white" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 32c60 0 60-24 120-24s60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24"/>
+</svg>
+
+<!-- ============================= QUI SOMMES-NOUS ============================= -->
+<section id="a-propos" class="bg-white px-6 md:px-10 py-24 md:py-32">
+  <div class="container-x grid md:grid-cols-12 gap-14 items-center">
+    <div class="md:col-span-6 reveal">
+      <p class="eyebrow mb-4">Qui sommes-nous</p>
+      <h2 class="font-display text-4xl md:text-5xl font-semibold mb-7 text-balance">Une entreprise marocaine spécialisée dans le distributeur automatique</h2>
+      <p class="text-black/70 text-lg leading-relaxed mb-5">
+        BIO CAFE est spécialisée dans la gestion et le dépôt de distributeurs automatiques de boissons chaudes, froides et de snacks. Nous proposons un matériel de marque, des distributeurs neufs rendant la monnaie, entièrement automatisés — et compatibles avec un paiement par badge ou clé automatique.
+      </p>
+      <p class="text-black/70 text-lg leading-relaxed mb-5">
+        Nous travaillons exclusivement avec des produits de marque italienne, sélectionnés avant tout pour leur qualité. Nos offres répondent aux besoins de toute entreprise en croissance, des PME aux grands sièges sociaux.
+      </p>
+      <p class="text-black/70 text-lg leading-relaxed">
+        Un engagement solennel envers l'entretien, la réparation et l'approvisionnement régulier : nos équipes assurent le suivi et le contrôle de chaque machine, avec un seul objectif — <span class="font-semibold text-coffee">la satisfaction totale de nos clients</span>.
+      </p>
+    </div>
+
+    <div class="md:col-span-6 reveal">
+      <div class="photo-panel aspect-[4/5] flex items-center justify-center p-10">
+        <svg width="100%" height="100%" viewBox="0 0 300 360" aria-hidden="true">
+          <rect x="40" y="40" width="140" height="280" rx="14" fill="rgba(255,255,255,0.1)" stroke="#EDEAE4" stroke-width="2"/>
+          <rect x="58" y="62" width="104" height="60" rx="6" fill="rgba(237,234,228,0.25)"/>
+          <circle cx="70" cy="150" r="6" fill="#D8BD8F"/>
+          <circle cx="90" cy="150" r="6" fill="#D8BD8F"/>
+          <circle cx="110" cy="150" r="6" fill="#D8BD8F"/>
+          <circle cx="130" cy="150" r="6" fill="#D8BD8F"/>
+          <circle cx="150" cy="150" r="6" fill="#D8BD8F"/>
+          <rect x="70" y="230" width="80" height="50" rx="8" fill="rgba(255,255,255,0.12)"/>
+          <text x="150" y="330" text-anchor="middle" fill="#EDEAE4" font-family="Manrope" font-size="13" letter-spacing="2">DISTRIBUTEUR BIO CAFE</text>
+        </svg>
+      </div>
+      <p class="text-xs text-black/40 mt-3 text-center italic">Illustration — à remplacer par une photographie de vos machines sur site.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Séparateur -->
+<svg class="steam-divider bg-white" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 32c60 0 60-24 120-24s60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24"/>
+</svg>
+
+<!-- ============================= VALEURS ============================= -->
+<section class="bg-grey px-6 md:px-10 py-24">
+  <div class="container-x grid md:grid-cols-2 gap-12 items-start">
+    <div class="reveal">
+      <p class="eyebrow mb-4">Nos valeurs</p>
+      <h3 class="font-display text-3xl md:text-4xl font-semibold mb-6 text-balance">Hygiène, intégrité et travail d'équipe</h3>
+      <p class="text-black/70 text-lg leading-relaxed">
+        Nous nous engageons à offrir un niveau très élevé de qualité, d'hygiène et de propreté. Notre équipe, diversifiée et bien formée, travaille dans le respect mutuel et la collaboration — la clé de notre succès depuis plus de 16 ans.
+      </p>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-5 reveal">
+      <div class="card p-6">
+        <div class="w-11 h-11 rounded-full bg-coffee/10 flex items-center justify-center mb-4 text-coffee">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h4 class="font-display font-semibold text-lg mb-1.5">Qualité & hygiène</h4>
+        <p class="text-sm text-black/60">Un niveau élevé d'exigence sur chaque machine et chaque produit livré.</p>
+      </div>
+      <div class="card p-6">
+        <div class="w-11 h-11 rounded-full bg-coffee/10 flex items-center justify-center mb-4 text-coffee">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/><circle cx="17" cy="7" r="3"/></svg>
+        </div>
+        <h4 class="font-display font-semibold text-lg mb-1.5">Équipe formée</h4>
+        <p class="text-sm text-black/60">Des techniciens et gestionnaires qualifiés, au service du client.</p>
+      </div>
+      <div class="card p-6">
+        <div class="w-11 h-11 rounded-full bg-coffee/10 flex items-center justify-center mb-4 text-coffee">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <h4 class="font-display font-semibold text-lg mb-1.5">Honnêteté & intégrité</h4>
+        <p class="text-sm text-black/60">Une relation de confiance abordée avec transparence à chaque étape.</p>
+      </div>
+      <div class="card p-6">
+        <div class="w-11 h-11 rounded-full bg-coffee/10 flex items-center justify-center mb-4 text-coffee">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h4 class="font-display font-semibold text-lg mb-1.5">Collaboration</h4>
+        <p class="text-sm text-black/60">Une gestion fondée sur le respect mutuel et le travail en équipe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= POURQUOI NOUS CHOISIR ============================= -->
+<section class="bg-white px-6 md:px-10 py-24 md:py-32">
+  <div class="container-x">
+    <div class="max-w-2xl mx-auto text-center mb-16 reveal">
+      <p class="eyebrow mb-4">Pourquoi nous choisir</p>
+      <h2 class="font-display text-4xl md:text-5xl font-semibold text-balance">Huit raisons de nous faire confiance</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Card 1 -->
+      <div class="card p-7 reveal">
+        <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center mb-5 text-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </div>
+        <h3 class="font-display font-semibold text-lg mb-2">Installation gratuite</h3>
+        <p class="text-sm text-black/60">Mise en place de votre distributeur sans frais initiaux.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="card p-7 reveal">
+        <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center mb-5 text-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        </div>
+        <h3 class="font-display font-semibold text-lg mb-2">Assistance rapide</h3>
+        <p class="text-sm text-black/60">Une équipe technique réactive en cas de besoin, où que vous soyez.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="card p-7 reveal">
+        <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center mb-5 text-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <h3 class="font-display font-semibold text-lg mb-2">Produits italiens</h3>
+        <p class="text-sm text-black/60">Une sélection exigeante de cafés et ingrédients de marque italienne.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="card p-7 reveal">
+        <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center mb-5 text-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+        </div>
+        <h3 class="font-display font-semibold text-lg mb-2">16+ ans d'expérience</h3>
+        <p class="text-sm text-black/60">Des techniciens qui disposent de plus de 16 ans d'expérience dans le domaine.</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="card p-7 reveal">
+        <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center mb-5 text-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96L12 12l8.73-5.04M12 22.08V12"/></svg>
+        </div>
+        <h3 class="font-display font-semibold text-lg mb-2">Rifornimento constant</h3>
+        <p class="text-sm text-black/60">Un réapprovisionnement régulier pour ne jamais tomber à court.</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="card p-7 reveal">
+        <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center mb-5 text-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 4v16M4 8h16"/></svg>
+        </div>
+        <h3 class="font-display font-semibold text-lg mb-2">Machines modernes</h3>
+        <p class="text-sm text-black/60">Des distributeurs neufs, automatisés, qui rendent la monnaie.</p>
+      </div>
+      <!-- Card 7 -->
+      <div class="card p-7 reveal">
+        <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center mb-5 text-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3 class="font-display font-semibold text-lg mb-2">Techniciens spécialisés</h3>
+        <p class="text-sm text-black/60">Suivi et contrôle des machines par des équipes professionnelles.</p>
+      </div>
+      <!-- Card 8 -->
+      <div class="card p-7 reveal">
+        <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center mb-5 text-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3 class="font-display font-semibold text-lg mb-2">Clients satisfaits</h3>
+        <p class="text-sm text-black/60">La satisfaction client comme priorité absolue, à chaque intervention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Séparateur -->
+<svg class="steam-divider bg-grey" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 32c60 0 60-24 120-24s60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24"/>
+</svg>
+
+<!-- ============================= PRODUITS ============================= -->
+<section id="produits" class="bg-grey px-6 md:px-10 py-24 md:py-32">
+  <div class="container-x">
+    <div class="max-w-2xl mb-16 reveal">
+      <p class="eyebrow mb-4">Nos produits</p>
+      <h2 class="font-display text-4xl md:text-5xl font-semibold text-balance">Une gamme complète, pensée pour l'entreprise</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Machines café -->
+      <article class="group reveal">
+        <div class="photo-panel aspect-[4/5] mb-6 flex items-center justify-center p-8 overflow-hidden">
+          <svg width="70%" viewBox="0 0 200 240" class="transition-transform duration-700 group-hover:scale-105" aria-hidden="true">
+            <rect x="40" y="20" width="120" height="200" rx="10" fill="rgba(255,255,255,0.08)" stroke="#EDEAE4" stroke-width="2"/>
+            <rect x="55" y="35" width="90" height="50" rx="5" fill="rgba(237,234,228,0.2)"/>
+            <circle cx="70" cy="105" r="5" fill="#D8BD8F"/><circle cx="88" cy="105" r="5" fill="#D8BD8F"/>
+            <circle cx="106" cy="105" r="5" fill="#D8BD8F"/><circle cx="124" cy="105" r="5" fill="#D8BD8F"/>
+            <rect x="70" y="150" width="60" height="40" rx="6" fill="rgba(255,255,255,0.1)"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-2xl font-semibold mb-3">Machines à café</h3>
+        <p class="text-black/65 leading-relaxed mb-2">Une gamme variée de distributeurs de café : expresso, long ou court, cappuccino, chocolat fort ou lacté, chocolat chaud. Il y en a pour tous les goûts.</p>
+        <p class="text-black/65 leading-relaxed">Simples d'utilisation — un bouton suffit — et adaptées en capacité aux très grandes entreprises, hôpitaux et aires d'autoroutes.</p>
+      </article>
+
+      <!-- Snacks -->
+      <article class="group reveal">
+        <div class="photo-panel aspect-[4/5] mb-6 flex items-center justify-center p-8 overflow-hidden">
+          <svg width="70%" viewBox="0 0 200 240" class="transition-transform duration-700 group-hover:scale-105" aria-hidden="true">
+            <rect x="35" y="20" width="130" height="200" rx="10" fill="rgba(255,255,255,0.08)" stroke="#EDEAE4" stroke-width="2"/>
+            <rect x="48" y="34" width="45" height="55" rx="4" fill="rgba(237,234,228,0.2)"/>
+            <rect x="107" y="34" width="45" height="55" rx="4" fill="rgba(237,234,228,0.2)"/>
+            <rect x="48" y="98" width="45" height="55" rx="4" fill="rgba(237,234,228,0.2)"/>
+            <rect x="107" y="98" width="45" height="55" rx="4" fill="rgba(237,234,228,0.2)"/>
+            <rect x="60" y="168" width="80" height="35" rx="6" fill="rgba(255,255,255,0.1)"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-2xl font-semibold mb-3">Distributeurs de snacks</h3>
+        <p class="text-black/65 leading-relaxed mb-2">Des collations, casse-croûtes et goûters, accessibles au sein de l'entreprise et associés à vos boissons préférées.</p>
+        <p class="text-black/65 leading-relaxed">Avant tout approvisionnement, nous menons une petite enquête auprès de vos collaborateurs pour proposer les produits réellement désirés.</p>
+      </article>
+
+      <!-- Boissons -->
+      <article class="group reveal">
+        <div class="photo-panel aspect-[4/5] mb-6 flex items-center justify-center p-8 overflow-hidden">
+          <svg width="70%" viewBox="0 0 200 240" class="transition-transform duration-700 group-hover:scale-105" aria-hidden="true">
+            <rect x="45" y="20" width="110" height="200" rx="10" fill="rgba(255,255,255,0.08)" stroke="#EDEAE4" stroke-width="2"/>
+            <rect x="58" y="34" width="30" height="70" rx="6" fill="rgba(237,234,228,0.2)"/>
+            <rect x="95" y="34" width="30" height="70" rx="6" fill="rgba(237,234,228,0.2)"/>
+            <rect x="58" y="112" width="67" height="70" rx="6" fill="rgba(255,255,255,0.1)"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-2xl font-semibold mb-3">Boissons froides & chaudes</h3>
+        <p class="text-black/65 leading-relaxed mb-2">Eau minérale, eau de table, sodas, boissons énergisantes en canettes — les plus appréciées de vos collaborateurs.</p>
+        <p class="text-black/65 leading-relaxed">Complétées par une offre de boissons chaudes (chocolat chaud, café...) au même distributeur.</p>
+      </article>
+    </div>
+
+    <!-- Image positive de l'entreprise -->
+    <div class="mt-20 grid md:grid-cols-12 gap-12 items-center reveal">
+      <div class="md:col-span-5">
+        <div class="photo-panel aspect-square flex items-center justify-center p-10">
+          <svg width="100%" viewBox="0 0 260 260" aria-hidden="true">
+            <circle cx="130" cy="130" r="100" fill="none" stroke="#D8BD8F" stroke-width="2" opacity="0.5"/>
+            <circle cx="130" cy="130" r="70" fill="none" stroke="#EDEAE4" stroke-width="1.5" opacity="0.4"/>
+            <path d="M90 150c0-14 14-14 14-28s-14-14-14-28" fill="none" stroke="#D8BD8F" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M130 150c0-14 14-14 14-28s-14-14-14-28" fill="none" stroke="#D8BD8F" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M170 150c0-14 14-14 14-28s-14-14-14-28" fill="none" stroke="#D8BD8F" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="md:col-span-7">
+        <h3 class="font-display text-3xl md:text-4xl font-semibold mb-5 text-balance">Reflétez une image positive de votre entreprise</h3>
+        <p class="text-black/70 text-lg leading-relaxed mb-5">
+          Un distributeur automatique de boissons est généralement très visible, lumineux et attractif. L'installer dans vos locaux permet de communiquer à vos clients, vos partenaires et vos collaborateurs une bonne image de marque — un service complémentaire qui se voit.
+        </p>
+        <p class="text-black/70 text-lg leading-relaxed">
+          L'impact de sa présence est encore renforcé lorsque le distributeur est personnalisé aux couleurs de votre entreprise.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Séparateur -->
+<svg class="steam-divider bg-white" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 32c60 0 60-24 120-24s60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24"/>
+</svg>
+
+<!-- ============================= MENU CAFÉ ============================= -->
+<section id="menu" class="bg-white px-6 md:px-10 py-24 md:py-32">
+  <div class="container-x">
+    <div class="max-w-2xl mb-16 reveal">
+      <p class="eyebrow mb-4">Menu café</p>
+      <h2 class="font-display text-4xl md:text-5xl font-semibold text-balance">Il y en a pour tous les goûts</h2>
+      <p class="text-black/60 text-lg mt-4">Prix de base par consommation : <span class="font-semibold text-coffee">4,00 DH</span>, avec possibilité de subvention 50/50 pour vos collaborateurs.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <!-- generate menu cards -->
+      <div class="card p-6 text-center reveal">
+        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
+        <h4 class="font-display font-semibold text-lg mb-1">Expresso</h4>
+        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      </div>
+      <div class="card p-6 text-center reveal">
+        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
+        <h4 class="font-display font-semibold text-lg mb-1">Café long</h4>
+        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      </div>
+      <div class="card p-6 text-center reveal">
+        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
+        <h4 class="font-display font-semibold text-lg mb-1">Cappuccino</h4>
+        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      </div>
+      <div class="card p-6 text-center reveal">
+        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
+        <h4 class="font-display font-semibold text-lg mb-1">Chocolat chaud</h4>
+        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      </div>
+      <div class="card p-6 text-center reveal">
+        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
+        <h4 class="font-display font-semibold text-lg mb-1">Café au lait</h4>
+        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      </div>
+      <div class="card p-6 text-center reveal">
+        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
+        <h4 class="font-display font-semibold text-lg mb-1">Lait</h4>
+        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      </div>
+      <div class="card p-6 text-center reveal">
+        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
+        <h4 class="font-display font-semibold text-lg mb-1">Thé citron</h4>
+        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      </div>
+      <div class="card p-6 text-center reveal">
+        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
+        <h4 class="font-display font-semibold text-lg mb-1">Café léger</h4>
+        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      </div>
+    </div>
+
+    <!-- Marques -->
+    <div class="mt-16 card p-8 md:p-10 reveal">
+      <h4 class="font-display font-semibold text-xl mb-6">Tarifs par marque de café</h4>
+      <div class="grid sm:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-display font-semibold text-coffee">4,00 DH</p>
+          <p class="text-sm text-black/55 mt-1">Mondial</p>
+        </div>
+        <div>
+          <p class="text-2xl font-display font-semibold text-coffee">5,00 DH</p>
+          <p class="text-sm text-black/55 mt-1">Lavazza</p>
+        </div>
+        <div>
+          <p class="text-2xl font-display font-semibold text-coffee">6,00 DH</p>
+          <p class="text-sm text-black/55 mt-1">Carte Noire</p>
+        </div>
+        <div>
+          <p class="text-2xl font-display font-semibold text-coffee">6,00 DH</p>
+          <p class="text-sm text-black/55 mt-1">Expresse</p>
+        </div>
+      </div>
+      <p class="text-sm text-black/50 mt-8 text-center max-w-2xl mx-auto">
+        Vous pouvez conserver le prix normal de la boisson au niveau de la machine, ou opter pour une subvention de 50% : 2,00 DH pris en charge par le collaborateur, 2,00 DH par l'entreprise. La facturation se fait chaque mois sur la base des consommations relevées par compteur.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Séparateur -->
+<svg class="steam-divider bg-grey" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 32c60 0 60-24 120-24s60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24"/>
+</svg>
+
+<!-- ============================= COMMENT NOUS TRAVAILLONS ============================= -->
+<section id="methode" class="bg-grey px-6 md:px-10 py-24 md:py-32">
+  <div class="container-x">
+    <div class="max-w-2xl mx-auto text-center mb-20 reveal">
+      <p class="eyebrow mb-4">Comment nous travaillons</p>
+      <h2 class="font-display text-4xl md:text-5xl font-semibold text-balance">Un processus clair, du premier contact au suivi mensuel</h2>
+    </div>
+
+    <div class="relative max-w-3xl mx-auto">
+      <div class="timeline-line" aria-hidden="true"></div>
+
+      <div class="space-y-14">
+        <div class="relative pl-20 md:pl-0 md:grid md:grid-cols-2 md:gap-14 reveal">
+          <div class="md:text-right md:pr-14">
+            <span class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 w-14 h-14 rounded-full bg-coffee text-white font-display font-semibold flex items-center justify-center">1</span>
+            <h4 class="font-display text-xl font-semibold mb-2 mt-1">Installation</h4>
+            <p class="text-black/65">Étude de vos besoins, choix de la machine adaptée et installation gratuite dans vos locaux.</p>
+          </div>
+          <div class="hidden md:block"></div>
+        </div>
+
+        <div class="relative pl-20 md:pl-0 md:grid md:grid-cols-2 md:gap-14 reveal">
+          <div class="hidden md:block"></div>
+          <div class="md:pl-14">
+            <span class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 w-14 h-14 rounded-full bg-coffee text-white font-display font-semibold flex items-center justify-center">2</span>
+            <h4 class="font-display text-xl font-semibold mb-2 mt-1">Configuration</h4>
+            <p class="text-black/65">Enquête auprès de vos collaborateurs, sélection des produits et mise en place de la tarification (prix plein ou subvention 50/50).</p>
+          </div>
+        </div>
+
+        <div class="relative pl-20 md:pl-0 md:grid md:grid-cols-2 md:gap-14 reveal">
+          <div class="md:text-right md:pr-14">
+            <span class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 w-14 h-14 rounded-full bg-coffee text-white font-display font-semibold flex items-center justify-center">3</span>
+            <h4 class="font-display text-xl font-semibold mb-2 mt-1">Rifornimento</h4>
+            <p class="text-black/65">Réapprovisionnement régulier des produits pour garantir une disponibilité continue.</p>
+          </div>
+          <div class="hidden md:block"></div>
+        </div>
+
+        <div class="relative pl-20 md:pl-0 md:grid md:grid-cols-2 md:gap-14 reveal">
+          <div class="hidden md:block"></div>
+          <div class="md:pl-14">
+            <span class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 w-14 h-14 rounded-full bg-coffee text-white font-display font-semibold flex items-center justify-center">4</span>
+            <h4 class="font-display text-xl font-semibold mb-2 mt-1">Assistance</h4>
+            <p class="text-black/65">Suivi technique, contrôle des machines et intervention rapide de nos équipes en cas de besoin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= STATISTIQUES ============================= -->
+<section class="bg-black px-6 md:px-10 py-24 relative overflow-hidden">
+  <div class="hero__texture"></div>
+  <div class="container-x relative grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+    <div class="reveal">
+      <p class="counter-num text-5xl md:text-6xl font-semibold text-gold-light" style="color:#D8BD8F" data-counter="16" data-suffix="+">0</p>
+      <p class="text-white/60 text-sm mt-3 uppercase tracking-widest">Ans d'expérience</p>
+    </div>
+    <div class="reveal">
+      <p class="counter-num text-5xl md:text-6xl font-semibold text-gold-light" style="color:#D8BD8F" data-counter="100" data-suffix="%">0</p>
+      <p class="text-white/60 text-sm mt-3 uppercase tracking-widest">Clients satisfaits</p>
+    </div>
+    <div class="reveal">
+      <p class="counter-num text-5xl md:text-6xl font-semibold text-gold-light" style="color:#D8BD8F" data-counter="24" data-suffix="h">0</p>
+      <p class="text-white/60 text-sm mt-3 uppercase tracking-widest">Interventions rapides</p>
+    </div>
+    <div class="reveal">
+      <p class="counter-num text-5xl md:text-6xl font-semibold text-gold-light" style="color:#D8BD8F" data-counter="100" data-suffix="%">0</p>
+      <p class="text-white/60 text-sm mt-3 uppercase tracking-widest">Produits premium</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CLIENTS ============================= -->
+<section id="clients" class="bg-white px-6 md:px-10 py-24 md:py-28 overflow-hidden">
+  <div class="container-x text-center mb-14 reveal">
+    <p class="eyebrow mb-4">Ils nous font confiance</p>
+    <h2 class="font-display text-3xl md:text-4xl font-semibold text-balance">Des ambassadeurs parmi nos clients fidèles</h2>
+  </div>
+
+  <div class="marquee-wrap overflow-hidden">
+    <div class="marquee">
+      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0">
+        <span class="font-display font-semibold text-xl tracking-wide text-coffee">CNSS</span>
+      </div>
+      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0">
+        <span class="font-display font-semibold text-xl tracking-wide text-coffee">PEUGEOT</span>
+      </div>
+      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0">
+        <span class="font-display font-semibold text-xl tracking-wide text-coffee">Intelcia</span>
+      </div>
+      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0">
+        <span class="font-display font-semibold text-xl tracking-wide text-coffee">Point S</span>
+      </div>
+      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0">
+        <span class="font-display font-semibold text-xl tracking-wide text-coffee">Outsourcia</span>
+      </div>
+      <!-- duplication pour la boucle infinie -->
+      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0" aria-hidden="true">
+        <span class="font-display font-semibold text-xl tracking-wide text-coffee">CNSS</span>
+      </div>
+      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0" aria-hidden="true">
+        <span class="font-display font-semibold text-xl tracking-wide text-coffee">PEUGEOT</span>
+      </div>
+      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0" aria-hidden="true">
+        <span class="font-display font-semibold text-xl tracking-wide text-coffee">Intelcia</span>
+      </div>
+      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0" aria-hidden="true">
+        <span class="font-display font-semibold text-xl tracking-wide text-coffee">Point S</span>
+      </div>
+      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0" aria-hidden="true">
+        <span class="font-display font-semibold text-xl tracking-wide text-coffee">Outsourcia</span>
+      </div>
+    </div>
+  </div>
+  <p class="text-center text-black/50 text-sm mt-8 italic">Wordmarks stylisés à titre indicatif — à remplacer par les logos officiels transmis par chaque client.</p>
+</section>
+
+<!-- ============================= TÉMOIGNAGES ============================= -->
+<section class="bg-grey px-6 md:px-10 py-24 md:py-28">
+  <div class="container-x">
+    <div class="max-w-2xl mx-auto text-center mb-16 reveal">
+      <p class="eyebrow mb-4">Témoignages</p>
+      <h2 class="font-display text-4xl md:text-5xl font-semibold text-balance">Ce que nos clients apprécient</h2>
+    </div>
+
+    <div class="max-w-3xl mx-auto reveal">
+      <div class="overflow-hidden rounded-3xl">
+        <div id="testimonial-track" class="t-track">
+
+          <div class="t-slide">
+            <div class="card p-10 md:p-12 text-center mx-1">
+              <div class="flex justify-center gap-1 mb-6 text-gold">★★★★★</div>
+              <p class="font-display text-xl md:text-2xl leading-relaxed mb-8">« Depuis l'installation de nos distributeurs BIO CAFE, l'ambiance en salle de pause a changé : le café est excellent et le service de réapprovisionnement est toujours ponctuel. »</p>
+              <div class="w-14 h-14 rounded-full bg-coffee/10 mx-auto mb-3 flex items-center justify-center text-coffee font-display font-semibold">RA</div>
+              <p class="font-semibold">Rachid A.</p>
+              <p class="text-sm text-black/55">Responsable des services généraux, Groupe Almadina</p>
+            </div>
+          </div>
+
+          <div class="t-slide">
+            <div class="card p-10 md:p-12 text-center mx-1">
+              <div class="flex justify-center gap-1 mb-6 text-gold">★★★★★</div>
+              <p class="font-display text-xl md:text-2xl leading-relaxed mb-8">« L'équipe technique intervient toujours rapidement en cas de panne. C'est rare de trouver un prestataire aussi fiable sur la durée. »</p>
+              <div class="w-14 h-14 rounded-full bg-coffee/10 mx-auto mb-3 flex items-center justify-center text-coffee font-display font-semibold">SL</div>
+              <p class="font-semibold">Salma L.</p>
+              <p class="text-sm text-black/55">Directrice administrative, Atlas Industries</p>
+            </div>
+          </div>
+
+          <div class="t-slide">
+            <div class="card p-10 md:p-12 text-center mx-1">
+              <div class="flex justify-center gap-1 mb-6 text-gold">★★★★★</div>
+              <p class="font-display text-xl md:text-2xl leading-relaxed mb-8">« La formule de subvention à 50/50 a été très appréciée par nos collaborateurs, et la facturation mensuelle est parfaitement claire. »</p>
+              <div class="w-14 h-14 rounded-full bg-coffee/10 mx-auto mb-3 flex items-center justify-center text-coffee font-display font-semibold">YM</div>
+              <p class="font-semibold">Youssef M.</p>
+              <p class="text-sm text-black/55">Chef du personnel, Groupe Riad Services</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div id="testimonial-dots" class="flex justify-center gap-2 mt-8" role="tablist" aria-label="Navigation des témoignages"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CALL TO ACTION ============================= -->
+<section class="relative bg-black px-6 md:px-10 py-28 overflow-hidden">
+  <div class="hero__texture"></div>
+  <div class="container-x relative text-center max-w-2xl mx-auto reveal">
+    <h2 class="font-display text-white text-4xl md:text-5xl font-semibold mb-8 text-balance">Offrez un café premium à vos collaborateurs.</h2>
+    <a href="#contact" data-cta data-cta-message="Bonjour BIO CAFE, je souhaite être contacté au sujet d'une installation." class="btn btn-primary !px-10 !py-4 !text-base">Contactez-nous</a>
+  </div>
+</section>
+
+<!-- ============================= CONTACT / FOOTER ============================= -->
+<footer id="contact" class="bg-coffee text-white/90 px-6 md:px-10 pt-24 pb-10">
+  <div class="container-x grid md:grid-cols-3 gap-14 mb-16">
+    <div>
+      <div class="flex items-center gap-2.5 mb-5">
+        <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1A1512"/>
+          <path d="M20 28h20v10a10 10 0 0 1-10 10 10 10 0 0 1-10-10V28z" fill="none" stroke="#B08D57" stroke-width="2.5"/>
+          <path d="M40 30h4a5 5 0 0 1 0 10h-4" fill="none" stroke="#B08D57" stroke-width="2.5"/>
+        </svg>
+        <span class="font-display text-xl font-semibold">BIO CAFE</span>
+      </div>
+      <p class="text-white/60 leading-relaxed">Du café de qualité à la qualité de service. Vente, installation, gestion et maintenance de distributeurs automatiques pour entreprises au Maroc.</p>
+    </div>
+
+    <div>
+      <h4 class="font-display font-semibold text-lg mb-5">Nous contacter</h4>
+      <ul class="space-y-3 text-white/70">
+        <li><a href="tel:+212664757055" class="hover:text-gold-light transition-colors">06 64 75 70 55</a></li>
+        <li><a href="tel:+212626005450" class="hover:text-gold-light transition-colors">06 26 00 54 50</a></li>
+        <li class="text-white/50 text-sm pt-2">Contact : Soufiane Mourad</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-display font-semibold text-lg mb-5">Suivez-nous</h4>
+      <div class="flex gap-3">
+        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:border-gold transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:border-gold transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:border-gold transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2 3.76-2 4 0 4.7 2.6 4.7 6V21h-4v-5.8c0-1.4 0-3.2-2-3.2s-2.2 1.5-2.2 3.1V21H9z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-x border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/50">
+    <p>© <span id="year"></span> BIO CAFE — Soufiane Mourad. Tous droits réservés.</p>
+    <p>Site conçu avec soin.</p>
+  </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
