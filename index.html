@@ -29,7 +29,7 @@
 <!-- Polices -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <!-- Feuilles de style : utilitaires (équivalent Tailwind, auto-hébergé) + styles personnalisés.
      Aucun script externe requis : le site fonctionne hors-ligne et sans dépendance à un CDN. -->
@@ -101,6 +101,7 @@
 
 <!-- ============================= HERO ============================= -->
 <section id="top" class="hero">
+  <img class="hero__photo" src="https://images.unsplash.com/photo-1743297195016-8988f496d886?auto=format&fit=crop&w=1800&q=70" alt="Distributeur automatique de boissons BIO CAFE" loading="eager">
   <div class="hero__texture"></div>
   <div class="hero__grain"></div>
 
@@ -154,20 +155,9 @@
     </div>
 
     <div class="md:col-span-6 reveal">
-      <div class="photo-panel aspect-[4/5] flex items-center justify-center p-10">
-        <svg width="100%" height="100%" viewBox="0 0 300 360" aria-hidden="true">
-          <rect x="40" y="40" width="140" height="280" rx="14" fill="rgba(255,255,255,0.1)" stroke="#EDEAE4" stroke-width="2"/>
-          <rect x="58" y="62" width="104" height="60" rx="6" fill="rgba(237,234,228,0.25)"/>
-          <circle cx="70" cy="150" r="6" fill="#D8BD8F"/>
-          <circle cx="90" cy="150" r="6" fill="#D8BD8F"/>
-          <circle cx="110" cy="150" r="6" fill="#D8BD8F"/>
-          <circle cx="130" cy="150" r="6" fill="#D8BD8F"/>
-          <circle cx="150" cy="150" r="6" fill="#D8BD8F"/>
-          <rect x="70" y="230" width="80" height="50" rx="8" fill="rgba(255,255,255,0.12)"/>
-          <text x="150" y="330" text-anchor="middle" fill="#EDEAE4" font-family="Manrope" font-size="13" letter-spacing="2">DISTRIBUTEUR BIO CAFE</text>
-        </svg>
+      <div class="photo-panel photo-panel--photo aspect-[4/5]">
+        <img src="https://images.unsplash.com/photo-1581068106019-5aa70c6ab424?auto=format&fit=crop&w=1000&q=75" alt="Distributeur automatique de café BIO CAFE en fonctionnement" loading="lazy">
       </div>
-      <p class="text-xs text-black/40 mt-3 text-center italic">Illustration — à remplacer par une photographie de vos machines sur site.</p>
     </div>
   </div>
 </section>
@@ -313,14 +303,8 @@
     <div class="grid md:grid-cols-3 gap-8">
       <!-- Machines café -->
       <article class="group reveal">
-        <div class="photo-panel aspect-[4/5] mb-6 flex items-center justify-center p-8 overflow-hidden">
-          <svg width="70%" viewBox="0 0 200 240" class="transition-transform duration-700 group-hover:scale-105" aria-hidden="true">
-            <rect x="40" y="20" width="120" height="200" rx="10" fill="rgba(255,255,255,0.08)" stroke="#EDEAE4" stroke-width="2"/>
-            <rect x="55" y="35" width="90" height="50" rx="5" fill="rgba(237,234,228,0.2)"/>
-            <circle cx="70" cy="105" r="5" fill="#D8BD8F"/><circle cx="88" cy="105" r="5" fill="#D8BD8F"/>
-            <circle cx="106" cy="105" r="5" fill="#D8BD8F"/><circle cx="124" cy="105" r="5" fill="#D8BD8F"/>
-            <rect x="70" y="150" width="60" height="40" rx="6" fill="rgba(255,255,255,0.1)"/>
-          </svg>
+        <div class="photo-panel photo-panel--photo aspect-[4/5] mb-6">
+          <img class="group-hover:scale-105" src="https://images.unsplash.com/photo-1642227218426-3786b108ed00?auto=format&fit=crop&w=800&q=75" alt="Grains de café torréfiés utilisés dans nos machines à café" loading="lazy">
         </div>
         <h3 class="font-display text-2xl font-semibold mb-3">Machines à café</h3>
         <p class="text-black/65 leading-relaxed mb-2">Une gamme variée de distributeurs de café : expresso, long ou court, cappuccino, chocolat fort ou lacté, chocolat chaud. Il y en a pour tous les goûts.</p>
@@ -329,15 +313,8 @@
 
       <!-- Snacks -->
       <article class="group reveal">
-        <div class="photo-panel aspect-[4/5] mb-6 flex items-center justify-center p-8 overflow-hidden">
-          <svg width="70%" viewBox="0 0 200 240" class="transition-transform duration-700 group-hover:scale-105" aria-hidden="true">
-            <rect x="35" y="20" width="130" height="200" rx="10" fill="rgba(255,255,255,0.08)" stroke="#EDEAE4" stroke-width="2"/>
-            <rect x="48" y="34" width="45" height="55" rx="4" fill="rgba(237,234,228,0.2)"/>
-            <rect x="107" y="34" width="45" height="55" rx="4" fill="rgba(237,234,228,0.2)"/>
-            <rect x="48" y="98" width="45" height="55" rx="4" fill="rgba(237,234,228,0.2)"/>
-            <rect x="107" y="98" width="45" height="55" rx="4" fill="rgba(237,234,228,0.2)"/>
-            <rect x="60" y="168" width="80" height="35" rx="6" fill="rgba(255,255,255,0.1)"/>
-          </svg>
+        <div class="photo-panel photo-panel--photo aspect-[4/5] mb-6">
+          <img class="group-hover:scale-105" src="https://images.unsplash.com/photo-1746555697990-3a405a5152b9?auto=format&fit=crop&w=800&q=75" alt="Distributeur automatique de snacks et boissons accessible aux collaborateurs" loading="lazy">
         </div>
         <h3 class="font-display text-2xl font-semibold mb-3">Distributeurs de snacks</h3>
         <p class="text-black/65 leading-relaxed mb-2">Des collations, casse-croûtes et goûters, accessibles au sein de l'entreprise et associés à vos boissons préférées.</p>
@@ -346,13 +323,8 @@
 
       <!-- Boissons -->
       <article class="group reveal">
-        <div class="photo-panel aspect-[4/5] mb-6 flex items-center justify-center p-8 overflow-hidden">
-          <svg width="70%" viewBox="0 0 200 240" class="transition-transform duration-700 group-hover:scale-105" aria-hidden="true">
-            <rect x="45" y="20" width="110" height="200" rx="10" fill="rgba(255,255,255,0.08)" stroke="#EDEAE4" stroke-width="2"/>
-            <rect x="58" y="34" width="30" height="70" rx="6" fill="rgba(237,234,228,0.2)"/>
-            <rect x="95" y="34" width="30" height="70" rx="6" fill="rgba(237,234,228,0.2)"/>
-            <rect x="58" y="112" width="67" height="70" rx="6" fill="rgba(255,255,255,0.1)"/>
-          </svg>
+        <div class="photo-panel photo-panel--photo aspect-[4/5] mb-6">
+          <img class="group-hover:scale-105" src="https://images.unsplash.com/photo-1743297195016-8988f496d886?auto=format&fit=crop&w=800&q=75" alt="Distributeur automatique de boissons froides et chaudes" loading="lazy">
         </div>
         <h3 class="font-display text-2xl font-semibold mb-3">Boissons froides & chaudes</h3>
         <p class="text-black/65 leading-relaxed mb-2">Eau minérale, eau de table, sodas, boissons énergisantes en canettes — les plus appréciées de vos collaborateurs.</p>
@@ -363,14 +335,8 @@
     <!-- Image positive de l'entreprise -->
     <div class="mt-20 grid md:grid-cols-12 gap-12 items-center reveal">
       <div class="md:col-span-5">
-        <div class="photo-panel aspect-square flex items-center justify-center p-10">
-          <svg width="100%" viewBox="0 0 260 260" aria-hidden="true">
-            <circle cx="130" cy="130" r="100" fill="none" stroke="#D8BD8F" stroke-width="2" opacity="0.5"/>
-            <circle cx="130" cy="130" r="70" fill="none" stroke="#EDEAE4" stroke-width="1.5" opacity="0.4"/>
-            <path d="M90 150c0-14 14-14 14-28s-14-14-14-28" fill="none" stroke="#D8BD8F" stroke-width="2.5" stroke-linecap="round"/>
-            <path d="M130 150c0-14 14-14 14-28s-14-14-14-28" fill="none" stroke="#D8BD8F" stroke-width="2.5" stroke-linecap="round"/>
-            <path d="M170 150c0-14 14-14 14-28s-14-14-14-28" fill="none" stroke="#D8BD8F" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
+        <div class="photo-panel photo-panel--photo aspect-square">
+          <img src="https://images.unsplash.com/photo-1758518727477-3885839edee7?auto=format&fit=crop&w=900&q=75" alt="Collaborateurs souriants faisant une pause café au bureau" loading="lazy">
         </div>
       </div>
       <div class="md:col-span-7">
@@ -391,6 +357,36 @@
   <path d="M0 32c60 0 60-24 120-24s60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24"/>
 </svg>
 
+<!-- ============================= GALERIE MACHINES ============================= -->
+<section class="bg-grey px-6 md:px-10 py-24 md:py-28">
+  <div class="container-x">
+    <div class="max-w-2xl mb-14 reveal">
+      <p class="eyebrow mb-4">Nos distributeurs en images</p>
+      <h2 class="font-display text-4xl md:text-5xl font-semibold text-balance">Des machines que vos collaborateurs verront chaque jour</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item gallery-item--tall reveal">
+        <img src="https://images.unsplash.com/photo-1743297195016-8988f496d886?auto=format&fit=crop&w=1000&q=75" alt="Distributeur automatique de boissons BIO CAFE installé en entreprise" loading="lazy">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1581068106019-5aa70c6ab424?auto=format&fit=crop&w=800&q=75" alt="Machine à café automatique BIO CAFE, vue rapprochée" loading="lazy">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1746555697990-3a405a5152b9?auto=format&fit=crop&w=800&q=75" alt="Collaborateurs utilisant un distributeur automatique au bureau" loading="lazy">
+      </div>
+      <div class="gallery-item gallery-item--wide reveal">
+        <img src="https://images.unsplash.com/photo-1758518727477-3885839edee7?auto=format&fit=crop&w=1200&q=75" alt="Équipe en pause café dans un espace de bureau moderne" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Séparateur -->
+<svg class="steam-divider bg-white" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 32c60 0 60-24 120-24s60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24 60-24 120-24 60 24 120 24"/>
+</svg>
+
 <!-- ============================= MENU CAFÉ ============================= -->
 <section id="menu" class="bg-white px-6 md:px-10 py-24 md:py-32">
   <div class="container-x">
@@ -401,46 +397,78 @@
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <!-- generate menu cards -->
-      <div class="card p-6 text-center reveal">
-        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
-        <h4 class="font-display font-semibold text-lg mb-1">Expresso</h4>
-        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      <!-- cartes menu avec photo produit -->
+      <div class="card menu-card reveal">
+        <div class="menu-card__photo">
+          <img src="https://images.unsplash.com/photo-1581068106019-5aa70c6ab424?auto=format&fit=crop&w=400&q=75" alt="Tasse d'espresso servie par un distributeur BIO CAFE" loading="lazy" width="400" height="400">
+        </div>
+        <div class="p-5 text-center">
+          <h4 class="font-display font-semibold text-lg mb-1">Expresso</h4>
+          <p class="text-gold font-semibold text-sm">4,00 DH</p>
+        </div>
       </div>
-      <div class="card p-6 text-center reveal">
-        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
-        <h4 class="font-display font-semibold text-lg mb-1">Café long</h4>
-        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      <div class="card menu-card reveal">
+        <div class="menu-card__photo">
+          <img src="https://images.unsplash.com/photo-1642227218426-3786b108ed00?auto=format&fit=crop&w=400&q=75" alt="Grains de café torréfiés utilisés pour le café long" loading="lazy" width="400" height="400">
+        </div>
+        <div class="p-5 text-center">
+          <h4 class="font-display font-semibold text-lg mb-1">Café long</h4>
+          <p class="text-gold font-semibold text-sm">4,00 DH</p>
+        </div>
       </div>
-      <div class="card p-6 text-center reveal">
-        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
-        <h4 class="font-display font-semibold text-lg mb-1">Cappuccino</h4>
-        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      <div class="card menu-card reveal">
+        <div class="menu-card__photo">
+          <img src="https://images.unsplash.com/photo-1474255710329-379550af928d?auto=format&fit=crop&w=400&q=75" alt="Cappuccino mousseux servi dans une tasse blanche" loading="lazy" width="400" height="400">
+        </div>
+        <div class="p-5 text-center">
+          <h4 class="font-display font-semibold text-lg mb-1">Cappuccino</h4>
+          <p class="text-gold font-semibold text-sm">4,00 DH</p>
+        </div>
       </div>
-      <div class="card p-6 text-center reveal">
-        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
-        <h4 class="font-display font-semibold text-lg mb-1">Chocolat chaud</h4>
-        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      <div class="card menu-card reveal">
+        <div class="menu-card__photo">
+          <img src="https://images.unsplash.com/photo-1637572815755-c4b80092dce1?auto=format&fit=crop&w=400&q=75" alt="Chocolat chaud garni de guimauves" loading="lazy" width="400" height="400">
+        </div>
+        <div class="p-5 text-center">
+          <h4 class="font-display font-semibold text-lg mb-1">Chocolat chaud</h4>
+          <p class="text-gold font-semibold text-sm">4,00 DH</p>
+        </div>
       </div>
-      <div class="card p-6 text-center reveal">
-        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
-        <h4 class="font-display font-semibold text-lg mb-1">Café au lait</h4>
-        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      <div class="card menu-card reveal">
+        <div class="menu-card__photo">
+          <img src="https://images.unsplash.com/photo-1501843508755-af0829d48618?auto=format&fit=crop&w=400&q=75" alt="Tasse de café au lait sur une table en bois" loading="lazy" width="400" height="400">
+        </div>
+        <div class="p-5 text-center">
+          <h4 class="font-display font-semibold text-lg mb-1">Café au lait</h4>
+          <p class="text-gold font-semibold text-sm">4,00 DH</p>
+        </div>
       </div>
-      <div class="card p-6 text-center reveal">
-        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
-        <h4 class="font-display font-semibold text-lg mb-1">Lait</h4>
-        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      <div class="card menu-card reveal">
+        <div class="menu-card__photo">
+          <img src="https://images.unsplash.com/photo-1611211301828-be4b317d0707?auto=format&fit=crop&w=400&q=75" alt="Verre de lait frais" loading="lazy" width="400" height="400">
+        </div>
+        <div class="p-5 text-center">
+          <h4 class="font-display font-semibold text-lg mb-1">Lait</h4>
+          <p class="text-gold font-semibold text-sm">4,00 DH</p>
+        </div>
       </div>
-      <div class="card p-6 text-center reveal">
-        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
-        <h4 class="font-display font-semibold text-lg mb-1">Thé citron</h4>
-        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      <div class="card menu-card reveal">
+        <div class="menu-card__photo">
+          <img src="https://images.unsplash.com/photo-1623193893875-b74cfcd406b2?auto=format&fit=crop&w=400&q=75" alt="Tasse de thé accompagnée d'une tranche de citron" loading="lazy" width="400" height="400">
+        </div>
+        <div class="p-5 text-center">
+          <h4 class="font-display font-semibold text-lg mb-1">Thé citron</h4>
+          <p class="text-gold font-semibold text-sm">4,00 DH</p>
+        </div>
       </div>
-      <div class="card p-6 text-center reveal">
-        <div class="w-10 h-10 mx-auto mb-4 rounded-full bg-coffee/10"></div>
-        <h4 class="font-display font-semibold text-lg mb-1">Café léger</h4>
-        <p class="text-gold font-semibold text-sm">4,00 DH</p>
+      <div class="card menu-card reveal">
+        <div class="menu-card__photo">
+          <img src="https://images.unsplash.com/photo-1501843508755-af0829d48618?auto=format&fit=crop&w=400&q=75" alt="Tasse de café léger" loading="lazy" width="400" height="400">
+        </div>
+        <div class="p-5 text-center">
+          <h4 class="font-display font-semibold text-lg mb-1">Café léger</h4>
+          <p class="text-gold font-semibold text-sm">4,00 DH</p>
+        </div>
       </div>
     </div>
 
@@ -561,36 +589,35 @@
 
   <div class="marquee-wrap overflow-hidden">
     <div class="marquee">
-      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0">
-        <span class="font-display font-semibold text-xl tracking-wide text-coffee">CNSS</span>
+      <div class="logo-chip logo-chip--c1">
+        <span class="client-wordmark">CNSS</span>
       </div>
-      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0">
-        <span class="font-display font-semibold text-xl tracking-wide text-coffee">PEUGEOT</span>
+      <div class="logo-chip logo-chip--c2">
+        <span class="client-wordmark">PEUGEOT</span>
       </div>
-      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0">
-        <span class="font-display font-semibold text-xl tracking-wide text-coffee">Intelcia</span>
+      <div class="logo-chip logo-chip--c3">
+        <span class="client-wordmark">Intelcia</span>
       </div>
-      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0">
-        <span class="font-display font-semibold text-xl tracking-wide text-coffee">Point S</span>
+      <div class="logo-chip logo-chip--c4">
+        <span class="client-wordmark">Point S</span>
       </div>
-      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0">
-        <span class="font-display font-semibold text-xl tracking-wide text-coffee">Outsourcia</span>
+      <div class="logo-chip logo-chip--c5">
+        <span class="client-wordmark">Outsourcia</span>
       </div>
-      <!-- duplication pour la boucle infinie -->
-      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0" aria-hidden="true">
-        <span class="font-display font-semibold text-xl tracking-wide text-coffee">CNSS</span>
+      <div class="logo-chip logo-chip--c1" aria-hidden="true">
+        <span class="client-wordmark">CNSS</span>
       </div>
-      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0" aria-hidden="true">
-        <span class="font-display font-semibold text-xl tracking-wide text-coffee">PEUGEOT</span>
+      <div class="logo-chip logo-chip--c2" aria-hidden="true">
+        <span class="client-wordmark">PEUGEOT</span>
       </div>
-      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0" aria-hidden="true">
-        <span class="font-display font-semibold text-xl tracking-wide text-coffee">Intelcia</span>
+      <div class="logo-chip logo-chip--c3" aria-hidden="true">
+        <span class="client-wordmark">Intelcia</span>
       </div>
-      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0" aria-hidden="true">
-        <span class="font-display font-semibold text-xl tracking-wide text-coffee">Point S</span>
+      <div class="logo-chip logo-chip--c4" aria-hidden="true">
+        <span class="client-wordmark">Point S</span>
       </div>
-      <div class="logo-chip flex items-center justify-center h-24 w-56 mx-4 rounded-2xl bg-grey shrink-0" aria-hidden="true">
-        <span class="font-display font-semibold text-xl tracking-wide text-coffee">Outsourcia</span>
+      <div class="logo-chip logo-chip--c5" aria-hidden="true">
+        <span class="client-wordmark">Outsourcia</span>
       </div>
     </div>
   </div>
